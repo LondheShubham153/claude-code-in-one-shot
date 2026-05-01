@@ -1,0 +1,142 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required — copy .env.example to .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required — copy .env.example to .env}
+      POSTGRES_DB: ${POSTGRES_DB:-urlshortener}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/init-temporal-dbs.sql:/docker-entrypoint-initdb.d/init-temporal-dbs.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  temporal:
+    image: temporalio/auto-setup:1.25
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB: postgres12
+      DB_PORT: 5432
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PWD: ${POSTGRES_PASSWORD}
+      POSTGRES_SEEDS: postgres
+      DBNAME: temporal
+      VISIBILITY_DBNAME: temporal_visibility
+    healthcheck:
+      test: ["CMD", "tctl", "--ad", "temporal:7233", "cluster", "health"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    expose:
+      - "7233"
+    restart: unless-stopped
+
+  temporal-ui:
+    image: temporalio/ui:2.30.1
+    depends_on:
+      temporal:
+        condition: service_healthy
+    environment:
+      TEMPORAL_ADDRESS: temporal:7233
+      TEMPORAL_CORS_ORIGINS: "http://localhost:8233"
+    ports:
+      - "8234:8080"  # UI on host :8234 (8233 sometimes taken by other Temporal instances)
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    image: urlshortener-backend:latest
+    depends_on:
+      postgres:
+        condition: service_healthy
+      temporal:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-urlshortener}
+      ALEMBIC_DATABASE_URL: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-urlshortener}
+      TEMPORAL_HOST: temporal:7233
+      TEMPORAL_NAMESPACE: default
+      TEMPORAL_TASK_QUEUE: urlshortener
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:?PUBLIC_BASE_URL is required — e.g. http://localhost:8080}
+      SAFE_BROWSING_API_KEY: ${SAFE_BROWSING_API_KEY:-}
+      RATE_LIMIT_SHORTEN: ${RATE_LIMIT_SHORTEN:-10/minute}
+      RUN_MIGRATIONS: "1"
+      ENV: ${ENV:-dev}
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 20s
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./backend
+    image: urlshortener-backend:latest  # reuse the same image as backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+      temporal:
+        condition: service_healthy
+    # The worker doesn't expose HTTP, so suppress the image's HTTP healthcheck.
+    healthcheck:
+      disable: true
+    command: ["python", "-m", "app.temporal.worker"]
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-urlshortener}
+      TEMPORAL_HOST: temporal:7233
+      TEMPORAL_NAMESPACE: default
+      TEMPORAL_TASK_QUEUE: urlshortener
+      SAFE_BROWSING_API_KEY: ${SAFE_BROWSING_API_KEY:-}
+      ENV: ${ENV:-dev}
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    image: urlshortener-frontend:latest
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8081:80"  # 8080 sometimes taken by other local services
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    profiles:
+      - public
+    depends_on:
+      - frontend
+    environment:
+      # Required only when this service runs (i.e. with --profile public).
+      # We default to empty here so `docker compose config` can validate without
+      # forcing the value in non-public runs; the entrypoint will fail loudly
+      # if ngrok actually starts without a token.
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN:-}
+    command:
+      - "http"
+      - "--log=stdout"
+      - "frontend:80"
+    ports:
+      - "4040:4040"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
