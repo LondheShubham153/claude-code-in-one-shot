@@ -1,0 +1,49 @@
+---
+import profileRaw from "../data/profile.json";
+
+const profile = profileRaw as Record<string, any>;
+const name = profile.name || profile.login || "Your Name";
+const avatarUrl = profile.avatar_url || "";
+const bio = profile.bio || "";
+const blog = profile.blog || "";
+---
+
+<section class="hero">
+  {avatarUrl && <img src={avatarUrl} alt={name} class="avatar" loading="eager" />}
+  <div>
+    <h1>{name}</h1>
+    {bio && <p class="tagline">{bio}</p>}
+    {blog && (
+      <p class="link">
+        <a href={blog} target="_blank" rel="noopener">{blog}</a>
+      </p>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    object-fit: cover;
+  }
+  .tagline {
+    color: var(--fg-muted);
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
+    max-width: 56ch;
+  }
+  .link {
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+  }
+</style>

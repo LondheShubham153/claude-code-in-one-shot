@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import ProjectGrid from "../components/ProjectGrid.astro";
+import ContactPlaceholder from "../components/ContactPlaceholder.astro";
+import profileRaw from "../data/profile.json";
+
+const profile = profileRaw as Record<string, any>;
+const name = profile.name || profile.login || "Portfolio";
+---
+
+<BaseLayout title={name} description={`${name} — portfolio and projects`}>
+  <Hero />
+  <About />
+  <ProjectGrid />
+  <ContactPlaceholder />
+</BaseLayout>

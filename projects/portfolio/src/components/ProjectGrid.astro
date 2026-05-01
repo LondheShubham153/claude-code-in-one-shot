@@ -1,0 +1,51 @@
+---
+import projectsRaw from "../data/projects.json";
+import ProjectCard from "./ProjectCard.astro";
+
+interface Repo {
+  name: string;
+  description: string | null;
+  url: string;
+  language: string | null;
+  stars: number;
+  forks: number;
+  topics?: string[];
+}
+
+const repos = projectsRaw as unknown as Repo[];
+---
+
+<section>
+  <h2>Projects</h2>
+  {repos.length === 0 ? (
+    <p class="empty">
+      No projects yet. Run <code>npm run fetch-github</code> to populate from the GitHub API.
+    </p>
+  ) : (
+    <div class="grid">
+      {repos.map((r) => (
+        <ProjectCard
+          name={r.name}
+          description={r.description}
+          url={r.url}
+          language={r.language}
+          stars={r.stars}
+          forks={r.forks}
+          topics={r.topics}
+        />
+      ))}
+    </div>
+  )}
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .empty {
+    color: var(--fg-muted);
+    font-style: italic;
+  }
+</style>

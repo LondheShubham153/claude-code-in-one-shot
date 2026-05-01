@@ -1,0 +1,760 @@
+[
+  {
+    "name": "kubestarter",
+    "description": "This is a Repository to get you started with Kubernetes.",
+    "url": "https://github.com/LondheShubham153/kubestarter",
+    "language": "Shell",
+    "stars": 816,
+    "forks": 4156,
+    "topics": [],
+    "updated_at": "2026-05-01T03:46:48Z"
+  },
+  {
+    "name": "LondheShubham153",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/LondheShubham153",
+    "language": null,
+    "stars": 307,
+    "forks": 235,
+    "topics": [],
+    "updated_at": "2026-05-01T03:19:44Z"
+  },
+  {
+    "name": "node-todo-cicd",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/node-todo-cicd",
+    "language": "EJS",
+    "stars": 264,
+    "forks": 5915,
+    "topics": [],
+    "updated_at": "2026-04-23T12:17:49Z"
+  },
+  {
+    "name": "django-notes-app",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/django-notes-app",
+    "language": "JavaScript",
+    "stars": 249,
+    "forks": 5674,
+    "topics": [],
+    "updated_at": "2026-05-01T07:53:46Z"
+  },
+  {
+    "name": "two-tier-flask-app",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/two-tier-flask-app",
+    "language": "HTML",
+    "stars": 226,
+    "forks": 3054,
+    "topics": [],
+    "updated_at": "2026-04-26T21:54:46Z"
+  },
+  {
+    "name": "Shell-Scripting-For-DevOps",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/Shell-Scripting-For-DevOps",
+    "language": "Shell",
+    "stars": 181,
+    "forks": 1030,
+    "topics": [],
+    "updated_at": "2026-04-30T09:09:17Z"
+  },
+  {
+    "name": "TWSThreeTierAppChallenge",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/TWSThreeTierAppChallenge",
+    "language": "JavaScript",
+    "stars": 161,
+    "forks": 1459,
+    "topics": [],
+    "updated_at": "2026-04-26T06:48:26Z"
+  },
+  {
+    "name": "aws-zero-to-hero",
+    "description": "This repository contains AWS Zero To Hero Course Materials",
+    "url": "https://github.com/LondheShubham153/aws-zero-to-hero",
+    "language": null,
+    "stars": 146,
+    "forks": 571,
+    "topics": [],
+    "updated_at": "2026-04-18T15:51:33Z"
+  },
+  {
+    "name": "three-tier-eks-iac",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/three-tier-eks-iac",
+    "language": "HCL",
+    "stars": 144,
+    "forks": 156,
+    "topics": [],
+    "updated_at": "2026-04-20T10:39:51Z"
+  },
+  {
+    "name": "terraform-for-devops",
+    "description": "This repository is your one stop solution for Terraform for DevOps Engineers ",
+    "url": "https://github.com/LondheShubham153/terraform-for-devops",
+    "language": "HCL",
+    "stars": 136,
+    "forks": 692,
+    "topics": [],
+    "updated_at": "2026-04-30T15:38:08Z"
+  },
+  {
+    "name": "kubernetes-in-one-shot",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/kubernetes-in-one-shot",
+    "language": "JavaScript",
+    "stars": 121,
+    "forks": 592,
+    "topics": [],
+    "updated_at": "2026-05-01T08:21:13Z"
+  },
+  {
+    "name": "python-masterclass",
+    "description": "This is the code for Python For DevOps masterclass",
+    "url": "https://github.com/LondheShubham153/python-masterclass",
+    "language": "Python",
+    "stars": 105,
+    "forks": 526,
+    "topics": [],
+    "updated_at": "2026-04-21T15:57:23Z"
+  },
+  {
+    "name": "django-todo-cicd",
+    "description": "This repo is for Django todo app deployment as a Devops engineer via Jenkins",
+    "url": "https://github.com/LondheShubham153/django-todo-cicd",
+    "language": "Python",
+    "stars": 102,
+    "forks": 2053,
+    "topics": [],
+    "updated_at": "2026-04-29T14:07:19Z"
+  },
+  {
+    "name": "TerraWeek",
+    "description": "#TerraWeek Challenge by TWS Community Builders is a 7 Day challenge to Upskill the DevOps Community, which will be starting on 5th June and ending on 11th June at 11:59 P.M IST.",
+    "url": "https://github.com/LondheShubham153/TerraWeek",
+    "language": "HCL",
+    "stars": 82,
+    "forks": 483,
+    "topics": [
+      "terraform",
+      "terraform-project"
+    ],
+    "updated_at": "2026-01-27T14:30:18Z"
+  },
+  {
+    "name": "argocd-in-one-shot",
+    "description": "ArgoCD In One Shot is your one stop solution to learn and implement ArgoCD from Zero to Hero in DevOps",
+    "url": "https://github.com/LondheShubham153/argocd-in-one-shot",
+    "language": "Shell",
+    "stars": 67,
+    "forks": 430,
+    "topics": [],
+    "updated_at": "2026-05-01T09:23:40Z"
+  },
+  {
+    "name": "trainwithshubham.github.io",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/trainwithshubham.github.io",
+    "language": "JavaScript",
+    "stars": 61,
+    "forks": 69,
+    "topics": [],
+    "updated_at": "2026-04-29T11:29:34Z"
+  },
+  {
+    "name": "react_django_demo_app",
+    "description": "A demo app for React and Django Deployment",
+    "url": "https://github.com/LondheShubham153/react_django_demo_app",
+    "language": "JavaScript",
+    "stars": 55,
+    "forks": 905,
+    "topics": [],
+    "updated_at": "2026-02-01T10:33:40Z"
+  },
+  {
+    "name": "microservices-k8s",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/microservices-k8s",
+    "language": "Python",
+    "stars": 51,
+    "forks": 490,
+    "topics": [],
+    "updated_at": "2026-04-20T08:59:07Z"
+  },
+  {
+    "name": "strands-temporal-agents",
+    "description": "Durable Execution for AI Agents built with Strands Agents and Temporal",
+    "url": "https://github.com/LondheShubham153/strands-temporal-agents",
+    "language": "Python",
+    "stars": 48,
+    "forks": 97,
+    "topics": [
+      "agent",
+      "agentic-workflow",
+      "strands-agents",
+      "temporal"
+    ],
+    "updated_at": "2026-04-15T12:23:04Z"
+  },
+  {
+    "name": "tws-e-commerce-app",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/tws-e-commerce-app",
+    "language": "TypeScript",
+    "stars": 45,
+    "forks": 598,
+    "topics": [],
+    "updated_at": "2026-04-20T03:59:36Z"
+  },
+  {
+    "name": "reddit-clone-k8s-ingress",
+    "description": "Learn k8s using this Reddit clone",
+    "url": "https://github.com/LondheShubham153/reddit-clone-k8s-ingress",
+    "language": "TypeScript",
+    "stars": 43,
+    "forks": 565,
+    "topics": [],
+    "updated_at": "2026-04-18T16:40:02Z"
+  },
+  {
+    "name": "observability-for-devops",
+    "description": "This repository is your one stop solution for observability for DevOps Engineers ",
+    "url": "https://github.com/LondheShubham153/observability-for-devops",
+    "language": "JavaScript",
+    "stars": 40,
+    "forks": 285,
+    "topics": [],
+    "updated_at": "2026-04-30T06:07:20Z"
+  },
+  {
+    "name": "terraform-advanced",
+    "description": "A repo for terraform-advanced topics like State Locking , modules, etc",
+    "url": "https://github.com/LondheShubham153/terraform-advanced",
+    "language": "HCL",
+    "stars": 36,
+    "forks": 189,
+    "topics": [],
+    "updated_at": "2026-04-06T11:40:36Z"
+  },
+  {
+    "name": "argocd-demos",
+    "description": "Demos of arogcd one shot video",
+    "url": "https://github.com/LondheShubham153/argocd-demos",
+    "language": null,
+    "stars": 35,
+    "forks": 365,
+    "topics": [],
+    "updated_at": "2026-04-27T17:38:58Z"
+  },
+  {
+    "name": "flask-app-ecs",
+    "description": "Simple flask app to be run on ECS",
+    "url": "https://github.com/LondheShubham153/flask-app-ecs",
+    "language": "HTML",
+    "stars": 31,
+    "forks": 864,
+    "topics": [],
+    "updated_at": "2026-04-30T04:49:50Z"
+  },
+  {
+    "name": "terraform-practice",
+    "description": "some practice terraform scripts",
+    "url": "https://github.com/LondheShubham153/terraform-practice",
+    "language": "HCL",
+    "stars": 31,
+    "forks": 316,
+    "topics": [],
+    "updated_at": "2026-01-27T14:30:13Z"
+  },
+  {
+    "name": "simple-java-docker",
+    "description": "A simple java app that runs on docker ",
+    "url": "https://github.com/LondheShubham153/simple-java-docker",
+    "language": "Dockerfile",
+    "stars": 30,
+    "forks": 699,
+    "topics": [],
+    "updated_at": "2026-04-29T09:41:22Z"
+  },
+  {
+    "name": "jenkins-shared-libraries",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/jenkins-shared-libraries",
+    "language": "Groovy",
+    "stars": 28,
+    "forks": 459,
+    "topics": [],
+    "updated_at": "2026-04-25T11:24:59Z"
+  },
+  {
+    "name": "aws-node-http-api-project",
+    "description": "aws-node-http-api-project for server less",
+    "url": "https://github.com/LondheShubham153/aws-node-http-api-project",
+    "language": "JavaScript",
+    "stars": 27,
+    "forks": 195,
+    "topics": [],
+    "updated_at": "2026-04-29T12:58:49Z"
+  },
+  {
+    "name": "tws-portfolio",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/tws-portfolio",
+    "language": "CSS",
+    "stars": 27,
+    "forks": 764,
+    "topics": [],
+    "updated_at": "2026-03-05T17:27:48Z"
+  },
+  {
+    "name": "strands-agents-workshop",
+    "description": "This is a One Shot Course on Strands Agents with Notebooks, Scripts, resources and Projects to take you from Zero To Hero in Strands Agents SDK usage in your Agentic AI Journey",
+    "url": "https://github.com/LondheShubham153/strands-agents-workshop",
+    "language": "Jupyter Notebook",
+    "stars": 23,
+    "forks": 33,
+    "topics": [
+      "agentic-ai",
+      "aws",
+      "bedrock",
+      "strands-agents"
+    ],
+    "updated_at": "2026-04-14T19:10:10Z"
+  },
+  {
+    "name": "terraform-ansible",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/terraform-ansible",
+    "language": "HCL",
+    "stars": 23,
+    "forks": 91,
+    "topics": [],
+    "updated_at": "2026-03-21T19:48:02Z"
+  },
+  {
+    "name": "python-multistage-docker",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/python-multistage-docker",
+    "language": "Dockerfile",
+    "stars": 22,
+    "forks": 207,
+    "topics": [],
+    "updated_at": "2026-04-11T12:00:50Z"
+  },
+  {
+    "name": "ansible-project",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/ansible-project",
+    "language": "HTML",
+    "stars": 21,
+    "forks": 149,
+    "topics": [],
+    "updated_at": "2026-01-21T15:25:20Z"
+  },
+  {
+    "name": "ansible-zero-to-hero",
+    "description": "\"Ansible - Zero To Hero\" a comprehensive guide to get started with Ansible",
+    "url": "https://github.com/LondheShubham153/ansible-zero-to-hero",
+    "language": null,
+    "stars": 21,
+    "forks": 109,
+    "topics": [],
+    "updated_at": "2026-01-21T15:24:57Z"
+  },
+  {
+    "name": "github-actions-demo",
+    "description": "This is a three tier app for DevOps",
+    "url": "https://github.com/LondheShubham153/github-actions-demo",
+    "language": "CSS",
+    "stars": 20,
+    "forks": 339,
+    "topics": [],
+    "updated_at": "2026-05-01T08:32:14Z"
+  },
+  {
+    "name": "terraform-ansible-multi-env",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/terraform-ansible-multi-env",
+    "language": "HCL",
+    "stars": 19,
+    "forks": 124,
+    "topics": [],
+    "updated_at": "2026-04-06T11:40:10Z"
+  },
+  {
+    "name": "github-for-devops-workshop",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/github-for-devops-workshop",
+    "language": "Python",
+    "stars": 15,
+    "forks": 607,
+    "topics": [],
+    "updated_at": "2026-04-29T11:52:30Z"
+  },
+  {
+    "name": "git-for-devops",
+    "description": "This repository is for understanding Git Concepts for DevOps.",
+    "url": "https://github.com/LondheShubham153/git-for-devops",
+    "language": null,
+    "stars": 14,
+    "forks": 108,
+    "topics": [],
+    "updated_at": "2026-03-25T13:27:10Z"
+  },
+  {
+    "name": "kubernetes-project",
+    "description": "this is a testing Kubernetes project for a Django todo app",
+    "url": "https://github.com/LondheShubham153/kubernetes-project",
+    "language": null,
+    "stars": 14,
+    "forks": 126,
+    "topics": [],
+    "updated_at": "2026-01-21T15:25:51Z"
+  },
+  {
+    "name": "cloudwatch-logs-analyzer",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/cloudwatch-logs-analyzer",
+    "language": "Python",
+    "stars": 13,
+    "forks": 32,
+    "topics": [],
+    "updated_at": "2026-03-20T17:20:39Z"
+  },
+  {
+    "name": "code-20201202-shubhamlondhe",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/code-20201202-shubhamlondhe",
+    "language": "Python",
+    "stars": 13,
+    "forks": 11,
+    "topics": [],
+    "updated_at": "2025-12-22T17:41:19Z"
+  },
+  {
+    "name": "amazon-q-rules",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/amazon-q-rules",
+    "language": null,
+    "stars": 12,
+    "forks": 9,
+    "topics": [],
+    "updated_at": "2026-04-12T03:51:05Z"
+  },
+  {
+    "name": "generative-ai-for-devops",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/generative-ai-for-devops",
+    "language": null,
+    "stars": 12,
+    "forks": 30,
+    "topics": [],
+    "updated_at": "2026-03-25T06:06:09Z"
+  },
+  {
+    "name": "harry-potter-invisibility-cloak",
+    "description": "This repository has the practice codes for OpenCV in Python",
+    "url": "https://github.com/LondheShubham153/harry-potter-invisibility-cloak",
+    "language": "Python",
+    "stars": 12,
+    "forks": 22,
+    "topics": [],
+    "updated_at": "2026-01-12T16:20:10Z"
+  },
+  {
+    "name": "shell_scripts",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/shell_scripts",
+    "language": "Shell",
+    "stars": 12,
+    "forks": 32,
+    "topics": [],
+    "updated_at": "2026-01-21T15:25:03Z"
+  },
+  {
+    "name": "terraform-workshop",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/terraform-workshop",
+    "language": "HCL",
+    "stars": 12,
+    "forks": 13,
+    "topics": [],
+    "updated_at": "2026-01-27T14:30:05Z"
+  },
+  {
+    "name": "java-quotes-app",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/java-quotes-app",
+    "language": "Java",
+    "stars": 11,
+    "forks": 262,
+    "topics": [],
+    "updated_at": "2026-04-09T10:26:07Z"
+  },
+  {
+    "name": "SkillPulse",
+    "description": "Skill Pulse is a Three Tier Web Application Built with Go and hosted with NGINX, deployed via GitHub Actions on AWS with Terraform & Kubernetes. ",
+    "url": "https://github.com/LondheShubham153/SkillPulse",
+    "language": "CSS",
+    "stars": 11,
+    "forks": 32,
+    "topics": [],
+    "updated_at": "2026-04-28T09:50:43Z"
+  },
+  {
+    "name": "stock-market-analysis",
+    "description": "DevOps for Stock Market Analysis Application",
+    "url": "https://github.com/LondheShubham153/stock-market-analysis",
+    "language": "HCL",
+    "stars": 11,
+    "forks": 36,
+    "topics": [],
+    "updated_at": "2026-03-28T08:09:04Z"
+  },
+  {
+    "name": "agentic-ai-masterclass-demo",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/agentic-ai-masterclass-demo",
+    "language": "Python",
+    "stars": 10,
+    "forks": 26,
+    "topics": [],
+    "updated_at": "2026-04-06T04:54:45Z"
+  },
+  {
+    "name": "crispy_credits",
+    "description": "Crispy Credits allows restaurants to sell vouchers at a discount to face value",
+    "url": "https://github.com/LondheShubham153/crispy_credits",
+    "language": "Python",
+    "stars": 10,
+    "forks": 8,
+    "topics": [],
+    "updated_at": "2025-11-14T07:12:46Z"
+  },
+  {
+    "name": "PromGraf",
+    "description": " \"PromGraf: A curated collection of Grafana dashboards for seamless visualization of Prometheus monitoring data, enabling users to monitor system performance with ease and precision.\"",
+    "url": "https://github.com/LondheShubham153/PromGraf",
+    "language": null,
+    "stars": 10,
+    "forks": 42,
+    "topics": [],
+    "updated_at": "2025-12-16T16:00:09Z"
+  },
+  {
+    "name": "python-learning",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/python-learning",
+    "language": "Python",
+    "stars": 10,
+    "forks": 23,
+    "topics": [],
+    "updated_at": "2026-01-21T15:25:15Z"
+  },
+  {
+    "name": "demo-shell-scripts",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/demo-shell-scripts",
+    "language": "Shell",
+    "stars": 9,
+    "forks": 35,
+    "topics": [],
+    "updated_at": "2026-04-22T18:27:13Z"
+  },
+  {
+    "name": "kubernetes_practice",
+    "description": "practice files for Kubernetes",
+    "url": "https://github.com/LondheShubham153/kubernetes_practice",
+    "language": null,
+    "stars": 9,
+    "forks": 57,
+    "topics": [],
+    "updated_at": "2026-01-21T15:26:05Z"
+  },
+  {
+    "name": "simple-ai-agents",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/simple-ai-agents",
+    "language": "Python",
+    "stars": 8,
+    "forks": 15,
+    "topics": [],
+    "updated_at": "2026-03-28T08:08:43Z"
+  },
+  {
+    "name": "terraform-aws-multi-env",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/terraform-aws-multi-env",
+    "language": "HCL",
+    "stars": 8,
+    "forks": 20,
+    "topics": [],
+    "updated_at": "2026-04-30T15:38:09Z"
+  },
+  {
+    "name": "devops-batch-5",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/devops-batch-5",
+    "language": null,
+    "stars": 7,
+    "forks": 26,
+    "topics": [],
+    "updated_at": "2025-11-11T21:45:05Z"
+  },
+  {
+    "name": "django-tutorial",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/django-tutorial",
+    "language": "Python",
+    "stars": 7,
+    "forks": 76,
+    "topics": [],
+    "updated_at": "2026-01-22T02:16:13Z"
+  },
+  {
+    "name": "aws-cloud-club-manipal",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/aws-cloud-club-manipal",
+    "language": "HTML",
+    "stars": 6,
+    "forks": 3,
+    "topics": [],
+    "updated_at": "2026-04-17T11:20:04Z"
+  },
+  {
+    "name": "jenkins-my-shared-libs",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/jenkins-my-shared-libs",
+    "language": "Groovy",
+    "stars": 6,
+    "forks": 37,
+    "topics": [],
+    "updated_at": "2025-09-07T05:56:29Z"
+  },
+  {
+    "name": "redit-app",
+    "description": "This is credit app",
+    "url": "https://github.com/LondheShubham153/redit-app",
+    "language": "TypeScript",
+    "stars": 5,
+    "forks": 26,
+    "topics": [],
+    "updated_at": "2026-04-19T08:27:55Z"
+  },
+  {
+    "name": "aston_sit_hackathon_nlp_track",
+    "description": "Detection of sentiments and fine-grained emotions about the disaster management from the tweets.",
+    "url": "https://github.com/LondheShubham153/aston_sit_hackathon_nlp_track",
+    "language": "Jupyter Notebook",
+    "stars": 4,
+    "forks": 3,
+    "topics": [],
+    "updated_at": "2025-12-18T05:49:10Z"
+  },
+  {
+    "name": "falcon-nft",
+    "description": "Explore Top NFTs in the Metaverse. #APIFest 🚀",
+    "url": "https://github.com/LondheShubham153/falcon-nft",
+    "language": "JavaScript",
+    "stars": 4,
+    "forks": 9,
+    "topics": [
+      "api",
+      "api-fest",
+      "nft",
+      "web3"
+    ],
+    "updated_at": "2026-04-17T12:01:51Z"
+  },
+  {
+    "name": "shubham-londhe-portfolio",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/shubham-londhe-portfolio",
+    "language": null,
+    "stars": 4,
+    "forks": 0,
+    "topics": [],
+    "updated_at": "2026-03-19T20:11:58Z"
+  },
+  {
+    "name": "simple-git-tutorial",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/simple-git-tutorial",
+    "language": null,
+    "stars": 4,
+    "forks": 7,
+    "topics": [],
+    "updated_at": "2026-01-21T15:42:30Z"
+  },
+  {
+    "name": "exploratory_data_analysis",
+    "description": "This repository has all the assignments/practice code for EDA Lab",
+    "url": "https://github.com/LondheShubham153/exploratory_data_analysis",
+    "language": "Jupyter Notebook",
+    "stars": 3,
+    "forks": 2,
+    "topics": [],
+    "updated_at": "2026-03-23T03:35:04Z"
+  },
+  {
+    "name": "deep_learning",
+    "description": "This repository contains the code for Deep Learning.",
+    "url": "https://github.com/LondheShubham153/deep_learning",
+    "language": "Jupyter Notebook",
+    "stars": 2,
+    "forks": 3,
+    "topics": [],
+    "updated_at": "2026-03-23T03:35:04Z"
+  },
+  {
+    "name": "git_demo_batch_2",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/git_demo_batch_2",
+    "language": null,
+    "stars": 2,
+    "forks": 4,
+    "topics": [],
+    "updated_at": "2026-01-21T15:22:43Z"
+  },
+  {
+    "name": "hackspire-demo",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/hackspire-demo",
+    "language": "Python",
+    "stars": 2,
+    "forks": 1,
+    "topics": [],
+    "updated_at": "2026-03-21T19:47:14Z"
+  },
+  {
+    "name": "Todo-app",
+    "description": "Practicing React and Django",
+    "url": "https://github.com/LondheShubham153/Todo-app",
+    "language": "JavaScript",
+    "stars": 2,
+    "forks": 15,
+    "topics": [],
+    "updated_at": "2026-02-22T14:55:18Z"
+  },
+  {
+    "name": "git-demo",
+    "description": null,
+    "url": "https://github.com/LondheShubham153/git-demo",
+    "language": "Python",
+    "stars": 1,
+    "forks": 2,
+    "topics": [],
+    "updated_at": "2026-01-21T15:22:46Z"
+  },
+  {
+    "name": "strands-deploy",
+    "description": "A strands agents deployment on AWS",
+    "url": "https://github.com/LondheShubham153/strands-deploy",
+    "language": "Python",
+    "stars": 1,
+    "forks": 6,
+    "topics": [],
+    "updated_at": "2025-09-08T08:51:06Z"
+  }
+]

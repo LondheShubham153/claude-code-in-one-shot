@@ -1,0 +1,58 @@
+---
+import profileRaw from "../data/profile.json";
+
+const profile = profileRaw as Record<string, any>;
+const location = profile.location || "";
+const company = profile.company || "";
+const followers = profile.followers ?? 0;
+const publicRepos = profile.public_repos ?? 0;
+---
+
+<section>
+  <h2>About</h2>
+  <p>
+    {company && (
+      <>
+        Currently at <strong>{company}</strong>.{" "}
+      </>
+    )}
+    {location && (
+      <>
+        Based in <strong>{location}</strong>.{" "}
+      </>
+    )}
+    {!company && !location && (
+      <span class="muted">
+        About copy is sourced from your GitHub profile (`bio`, `company`, `location`). Edit your
+        GitHub profile and re-run `npm run fetch-github` to refresh.
+      </span>
+    )}
+  </p>
+  {(publicRepos > 0 || followers > 0) && (
+    <p class="stats">
+      {publicRepos > 0 && (
+        <span>
+          <strong>{publicRepos}</strong> public repos
+        </span>
+      )}
+      {followers > 0 && (
+        <span>
+          <strong>{followers}</strong> followers
+        </span>
+      )}
+    </p>
+  )}
+</section>
+
+<style>
+  .stats {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--fg-muted);
+    font-size: 0.95rem;
+  }
+  .muted {
+    color: var(--fg-muted);
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,50 @@
+<button id="theme-toggle" type="button" aria-label="Toggle color theme">
+  <span class="sun" aria-hidden="true">☀</span>
+  <span class="moon" aria-hidden="true">☾</span>
+</button>
+
+<style>
+  button {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--bg-elevated);
+    color: var(--fg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    z-index: 100;
+  }
+  button:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+  }
+  .sun,
+  .moon {
+    display: none;
+  }
+  :global([data-theme="light"]) .moon {
+    display: inline;
+  }
+  :global([data-theme="dark"]) .sun {
+    display: inline;
+  }
+</style>
+
+<script>
+  const btn = document.getElementById("theme-toggle");
+  btn?.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+</script>
