@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "skills": {
+    "docker": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "skills/docker/SKILL.md",
+      "installCount": 318,
+      "purpose": "Multi-stage Dockerfiles + docker-compose patterns"
+    },
+    "fastapi": {
+      "source": "fastapi/fastapi",
+      "sourceType": "github",
+      "skillPath": "skills/fastapi/SKILL.md",
+      "installCount": 2000,
+      "purpose": "FastAPI app shape, routers, lifespan, exception handlers"
+    },
+    "database-migration": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "skills/database-migration/SKILL.md",
+      "installCount": 10600,
+      "purpose": "Alembic migration patterns; async/sync URL split"
+    },
+    "frontend-react-best-practices": {
+      "source": "sergiodxa/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-react-best-practices/SKILL.md",
+      "installCount": 720,
+      "purpose": "Vite + React form/result UI patterns"
+    },
+    "temporal-developer": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "~/.claude/skills/temporal-developer",
+      "purpose": "Workflow/activity patterns, non-determinism rules, schedules, continue-as-new — invoked when authoring app/temporal/*"
+    }
+  }
+}
