@@ -1,6 +1,6 @@
 # claude-code-in-one-shot
 
-Multi-project workspace exploring what's buildable in a single Claude Code session, end-to-end. Each project lives under `projects/<name>/` and is independently runnable.
+Projects built end-to-end with [Claude Code](https://claude.ai/code) in a single session — scaffolded, dockerized, deployed, tested, and documented from one prompt-driven flow. Each project lives under `projects/<name>/` and is independently runnable.
 
 This repo is the companion artifact to a Claude Code walkthrough video. The "Concepts covered" section at the bottom maps each chapter to where it shows up in the codebase, so you can use the repo as a study aid alongside the video.
 
@@ -23,6 +23,8 @@ FastAPI + React + Postgres + self-hosted Temporal. Click counts and daily Safe B
 - **Tests**: 57 passing, 82% coverage. From `projects/url-shortener/backend/` with `.venv` active: `pytest -q --cov=app --cov-fail-under=80`.
 - **Details**: [README](./projects/url-shortener/README.md), [tasks](./projects/url-shortener/tasks.md), [ADRs 0001–0007](./projects/url-shortener/decisions/)
 
+Additional one-shot projects (pastebin, CLI todo, Temporal demo, Claude API chatbot, etc.) are tracked in [issue #1](https://github.com/LondheShubham153/claude-code-in-one-shot/issues/1).
+
 ## Conventions
 
 Each project follows the same shape so navigating between them is predictable:
@@ -32,18 +34,28 @@ projects/<name>/
 ├── docker-compose.yml          # full stack with healthchecks
 ├── Dockerfile (or backend/, frontend/Dockerfile)
 ├── .env.example                # documented; .env is gitignored
-├── README.md                   # quickstart, phase status, gotchas
-├── tasks.md                    # phased checkbox tracker
+├── README.md                   # what it is, how to run it
+├── tasks.md                    # phased checkbox tracker (source of truth)
 └── decisions/                  # ADR-style architecture decisions (0001–)
 ```
 
-Authoring conventions, port allocations, and the multi-stage Dockerfile pattern are documented in [`CLAUDE.md`](./CLAUDE.md).
+The root [`CLAUDE.md`](./CLAUDE.md) routes Claude Code into each project and documents authoring conventions, port allocations, and the multi-stage Dockerfile pattern.
+
+## `.claude/` setup
+
+Repo-root [`.claude/settings.local.json`](.claude/) holds shared permissions and hooks for both projects:
+
+- a `code-reviewer` subagent that runs on file changes
+- `PostToolUse` / `FileChanged` hooks wired into the same settings file
+- auto-allowed tool patterns (e.g. `mkdir`) so scaffolding doesn't pause for confirmation
+
+This pattern is reusable — copy `.claude/settings.local.json` into a new repo and adjust the agent prompts. No project-level overrides; the repo-root config applies to every project here.
 
 ## Working in this repo
 
-- `CLAUDE.md` is the entry point for AI assistants — it captures repo-level guidance, project status, common commands, and conventions both projects follow.
+- `CLAUDE.md` is the entry point for AI assistants — repo-level guidance, project status, common commands, and conventions both projects follow.
 - `.claude/settings.local.json` at the repo root holds shared permissions and hooks. Projects don't have their own.
-- The `add-url-shortener` branch added the URL shortener; `main` has the portfolio. Each project is built and verified independently — no inter-project dependencies.
+- Each project is built and verified independently — no inter-project dependencies.
 
 ## Status
 
@@ -51,6 +63,10 @@ Authoring conventions, port allocations, and the multi-stage Dockerfile pattern 
 | ---------------- | ---------------------------------------- | --------------------------------------------- | ---------------------------------------- |
 | portfolio        | ✅ complete (in-browser verified)         | deferred — Go backend + Postgres + analytics | optional — domain, CI, admin, Lighthouse |
 | url-shortener    | ✅ complete (live-verified end-to-end)    | deferred — auth, expiry, custom slugs, dashboard | optional — domain, CI, Lighthouse        |
+
+## Contributing
+
+Fork, swap in your own GitHub username (used by the portfolio's GitHub-driven content), and follow the project's README. See [issue #1](https://github.com/LondheShubham153/claude-code-in-one-shot/issues/1) for the documentation backlog and proposed projects.
 
 ## Concepts covered
 
@@ -64,12 +80,12 @@ The companion video walks through 24 Claude Code concepts. The list below preser
 | 4  | Permission modes explained           | `.claude/settings.local.json` configures auto-allowed tools (e.g. `mkdir`).                                                                                   |
 | 5  | What is CLAUDE.md                    | [`CLAUDE.md`](./CLAUDE.md) at the repo root — entry point for AI assistants, multi-project guidance, conventions.                                             |
 | 6  | Auto memory                          | The url-shortener planning session wrote a `feedback_durability_preference.md` memory capturing the user's reliability preference, indexed in `MEMORY.md`.    |
-| 7  | Inside the `.claude/` folder         | `.claude/settings.local.json` at the repo root — shared permissions and hooks for both projects.                                                              |
+| 7  | Inside the `.claude/` folder         | `.claude/settings.local.json` at the repo root — shared permissions and hooks for both projects (see "`.claude/` setup" above).                               |
 | 8  | Configuring `settings.json`          | Same file. No project-level overrides; the repo-root config applies to both projects (documented in [`CLAUDE.md`](./CLAUDE.md)).                              |
 | 9  | Slash commands                       | The url-shortener planning session used `/plan`, `/find-skills`, `/temporal-developer`. Each maps to a skill or built-in command.                             |
 | 10 | What are skills                      | [`projects/url-shortener/skills-lock.json`](./projects/url-shortener/skills-lock.json) pins five skills (docker, fastapi, database-migration, frontend-react-best-practices, temporal-developer). The portfolio uses `github-issues`. |
 | 11 | What are subagents                   | The url-shortener was built using `Explore` (research), `Plan` (design), and `general-purpose` (test/verify/push). The verify+test+push handoff at end of session ran three sub-agents in parallel-then-sequential. |
-| 12 | What are hooks                       | A `code-reviewer` hook is configured in `.claude/settings.local.json`.                                                                                        |
+| 12 | What are hooks                       | A `code-reviewer` hook is configured in `.claude/settings.local.json` (see "`.claude/` setup" above).                                                         |
 | 13 | What is MCP                          | The session had GitHub MCP tools available (`mcp__github__*`) and IDE diagnostics (`mcp__ide__getDiagnostics`).                                               |
 | 14 | Plugins and marketplaces             | `npx skills find <query>` was used to discover skills from skills.sh; pinning is via `skills-lock.json` (see #10).                                            |
 | 15 | IDE integrations and surfaces        | VS Code-style file selection signals (system reminders when the user opens a file) drove a couple of mid-session course corrections.                          |
