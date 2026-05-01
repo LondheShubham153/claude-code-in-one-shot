@@ -4,9 +4,9 @@ A reliable URL shortener built with FastAPI, React, Postgres, and Temporal. Subm
 
 ## Phase status
 
-- **Phase 1** — MVP: shorten + redirect + click count, three guardrails (URL/SSRF validation, Safe Browsing, rate limit), Temporal workflows for async click counting and daily Safe Browsing re-checks. _(In progress)_
-- **Phase 2** — Custom slugs, expiry, per-link analytics, auth + per-user dashboard. _(Deferred)_
-- **Phase 3** — Reserved domain, CI/CD, Lighthouse budget. _(Deferred)_
+- **Phase 1** — MVP: shorten + redirect + click count, three guardrails (URL/SSRF validation, Safe Browsing, rate limit), Temporal workflows for async click counting and daily Safe Browsing re-checks. **Complete — live-verified end-to-end.** Verified scenarios (see [`tasks.md`](./tasks.md) "Validation" section): golden path, all three guardrails (422/400/429), 410 on disabled links, bare `/<slug>` nginx rewrite, schedule registration, **Temporal-outage during shorten still 201** (shorten doesn't depend on Temporal), **worker-outage durability** (signals buffer at Temporal frontend, drain on resume — 5/5 clicks landed). Backend test suite: **57 passing, 82% coverage** (gate 80).
+- **Phase 2** — Custom slugs (already supported in schema; not yet exposed on the form), per-link expiry, per-link analytics, auth + per-user dashboard, exact-once click counting via per-flush UUID + dedupe table. _(Deferred)_
+- **Phase 3** — Reserved domain, CI/CD, Lighthouse budget, admin view. _(Deferred)_
 
 See [`tasks.md`](./tasks.md) for the granular tracker and [`decisions/`](./decisions/) for ADRs.
 
@@ -53,6 +53,18 @@ cd frontend
 npm install
 npm run dev   # Vite at http://localhost:5173, proxies /api and /s to :8000
 ```
+
+## Running tests
+
+From `projects/url-shortener/backend/` with the venv active:
+
+```bash
+pytest                                       # 57 tests, ~5s
+pytest -q --cov=app --cov-fail-under=80     # with coverage gate (current: 82%)
+pytest tests/test_workflow_click_counter.py  # just the workflow tests
+```
+
+Tests use `testcontainers-python` for an ephemeral Postgres per session and `temporalio.testing.WorkflowEnvironment` for workflow tests, so **Docker must be running**. The conftest invokes Alembic via `sys.executable -m alembic` so tests work whether you run `pytest` directly or via `python -m pytest`. `app/temporal/worker.py` is excluded from coverage as a runtime-only entrypoint (see `[tool.coverage.run]` in `pyproject.toml`).
 
 ## API
 
